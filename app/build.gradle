@@ -14,7 +14,7 @@ plugins {
 }
 
 def keyProps = new Properties()
-def keyPropsFile = rootProject.file('keystore/keystore.properties')
+def keyPropsFile = rootProject.file('keystore.properties')
 if (keyPropsFile.exists()) {
     keyProps.load(new FileInputStream(keyPropsFile))
 }
@@ -398,5 +398,6 @@ static def getGitCommitId() {
         return ""
     }
 }
+
 
 
