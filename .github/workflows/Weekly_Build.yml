@@ -41,7 +41,7 @@ jobs:
         with:
           repository: xiaoyimeng666/keystore
           token: ${{ secrets.MSG }} # 连接仓库的token,需要单独配置
-          path: keystore # 仓库的根目录名
+          path: / # 仓库的根目录名
       # 打包release
       - name: Build with Gradle
         run: bash ./gradlew assembleRelease
@@ -127,4 +127,5 @@ jobs:
           name: "SmsF_${{ env.ver_name }}_500${{ env.ver_code }}_x86_64_release.apk"
 
           path: "${{ env.output }}/SmsF_*_x86_64_release.apk"
+
 
